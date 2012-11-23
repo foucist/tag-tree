@@ -4,6 +4,10 @@ gem 'rails', '3.2.9'
 
 gem 'sqlite3'
 
+gem 'acts-as-taggable-on'
+
+gem 'jquery-rails'
+
 group :assets do
   gem 'haml'
   gem 'sass-rails',   '~> 3.2.3'
@@ -15,7 +19,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'thin'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
