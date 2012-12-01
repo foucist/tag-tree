@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
   def index
-    @tag_order, @tree = Entry.tree
+    @tag_tree, @tag_order = Entry.tree
   end
 end

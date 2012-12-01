@@ -7,40 +7,22 @@ class Entry < ActiveRecord::Base
 
   def set_tags
     self.tag_list = self.name.scan(/#(\w+)/).join(', ')
-    self.save
+      self.save
   end
 
   def self.tree
-    tree = {}
+    auto_hash = Hash.new{ |h,k| h[k] = Hash.new(&h.default_proc) }
+    tag_order = Entry.tag_counts.order('COUNT desc')
 
-    tag_order =  Entry.tag_counts.order('count DESC').map {|x| x.name} << nil
+    Entry.all.each{ |entry|
+      sub = auto_hash
+      keys = tag_order & entry.tags
+      keys.each { |leaf| sub = sub[leaf] }
+      sub.default = nil
+      (sub[:entry] ||= []) << entry
+    }
 
-    Entry.all.each do |entry|
-      tags = tag_order & entry.tags.map {|x| x.name} #.scan(/#(\w+)/).flatten #.join(', ')
-      tags = [nil] if tags.empty?
-      deepest_folder = insert_leaves(tree,tags)
-      if deepest_folder[:entry].nil?
-        deepest_folder[:entry] = entry 
-      else
-        deepest_folder[:entry] = [deepest_folder[:entry], entry].flatten
-      end
-    end
-
-    return [tag_order, tree]
-  end
-
-  private
-  def self.insert_leaves(tree,node_list)
-    next_leaf = node_list[0]
-    rest = node_list[1..-1]
-    tree[next_leaf] ||= {}
-    if not rest.empty?
-      insert_leaves(tree[next_leaf],rest)
-    else
-      tree[next_leaf]
-      # recursively, this will fall out to be the final result, making the
-      # function return the last (deepest) node inserted.
-    end
+    return [auto_hash, tag_order]
   end
 
 end

@@ -1,28 +1,22 @@
 module EntriesHelper
   include ActsAsTaggableOn::TagsHelper
 
-  def build_tree
-    @html = ""
-
-    recursive_html_construction(@tree,@html)
-
-    return @html
+  def hash_to_haml(hash, key_order)
+    @key_order = key_order << :entry
+    hash_to_haml_loop(hash)
   end
 
   private
-  def recursive_html_construction(branch, html)
-    return if branch.keys.compact.empty? # abort if the only key is :entry
-    (@tag_order & branch.keys).each do |category|
-      next if category == :entry # skip href entries.
-      html << '<ul>'
-      html << "<li>#{category}</li>" unless category.nil?
-      if branch[category].key?(:entry)
-        [branch[category][:entry]].flatten.each {|x| html << "<li><a href='foo'>#{x.name}</a></li>" }
+  def hash_to_haml_loop(hash)
+    haml_tag(:ul) do
+      Hash[hash.sort_by{|a,b| @key_order.index(a) }].each do |key, value|
+        if key == :entry
+          value.each {|x| haml_tag(:li){ haml_tag(:a, :href => x.id){ haml_concat(x.name) }}}
+        else
+          haml_tag(:li){ haml_concat(key.name) }
+        end
+        hash_to_haml_loop(value) if value.is_a?(Hash) && !value.empty?
       end
-      recursive_html_construction(branch[category],html)
     end
-    html << '</ul>'
   end
-
 end
-
