@@ -8,12 +8,12 @@ module EntriesHelper
 
   private
   def hash_to_haml_loop(hash)
-    haml_tag(:ul) do
-      Hash[hash.sort_by{|a,b| @key_order.index(a) }].each do |key, value|
+    Hash[hash.sort_by{|a,b| @key_order.index(a) }].each do |key, value|
+      haml_tag(:ul) do
         if key == :entry
-          value.each {|x| haml_tag(:li){ haml_tag(:a, :href => x.id){ haml_concat(x.name) }}}
+          value.each {|entry| haml_concat(render 'entry', :entry => entry) }
         else
-          haml_tag(:li){ haml_concat(key.name) }
+          haml_tag(:h3, "#"+key.name)
         end
         hash_to_haml_loop(value) if value.is_a?(Hash) && !value.empty?
       end

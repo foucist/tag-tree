@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title
+      = Date.today.to_s(:long_ordinal)
+      \- Inputapp
+    %link{:href => "img/favicon.png", :rel => "icon", :type => "image/png"}/
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      %p{:style => "color: green"}= notice
+      = yield

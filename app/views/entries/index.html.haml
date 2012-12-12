@@ -1,1 +1,6 @@
-- hash_to_haml(@tag_tree, @tag_order)
+%div.col1.input-form
+  %div.input-box
+    = render 'form', :entry => Entry.new
+
+%div.col1.task-list#task-list
+  = render 'list' #hash_to_haml(@tag_tree, @tag_order)
