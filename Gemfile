@@ -1,8 +1,16 @@
 source 'https://rubygems.org'
+ruby "1.9.3"
 
 gem 'rails', '3.2.9'
 
-gem 'sqlite3'
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'thin'
+end
 
 gem 'acts-as-taggable-on'
 
@@ -17,10 +25,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-end
-
-group :development do
-  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password

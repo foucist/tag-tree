@@ -9,7 +9,7 @@
 Entry.create(name: "Build a rocketship #rocket #space")
 Entry.create(name: "Build an #asteroid #miner #space")
 Entry.create(name: "Colonize a NEA #asteroid #space")
-Entry.create(name: "Research robotic mining #mining")
+Entry.create(name: "Research robotic mining #miner")
 Entry.create(name: "Study hiragana #japanese")
 Entry.create(name: "Study Remember the Kanji #japanese")
 Entry.create(name: "Read www.e-drexler.com/d/06/00/EOC/EOC_Cover.html #nano")
