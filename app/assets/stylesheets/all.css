@@ -1,0 +1,210 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/*
+Site developed by Yashodhan Talwar
+http://www.ytalwar.com
+
+*/
+
+
+/* Ultra-Light, Diet CSS Grid Framework */
+/* ==================================== */ 
+
+/* reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; text-align: left;}
+table {border-collapse: separate; border-spacing: 0;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+
+/* options */
+caption, th, strong, dt {font-weight: bold;}
+em, quote, blockquote, cite {font-style: italic;}
+ul, ol, li, dd {margin-left: 1em;}
+ol.none, ul.none {list-style: none;} /*use .none for empty lists*/
+ol.none, ul.none, ol.none li, ul.none li, li.none, dl.none dd, dd.none, dl.none {margin: 0;}
+dl.none dt, dt.none {font-weight: inherit;}
+option {padding-left: 0.4em;}
+img {display: block;} 
+
+/* font size */
+body {font-size: 14px; line-height: 18px;}
+h1, h2, h3, h4, h5, p, ol, ul {margin-bottom: 18px;}
+div p:last-child {margin-bottom: 0;}
+h1 {font-size: 36px; line-height: 36px;}
+h2 {font-size: 24px; line-height: 36px;}
+h3 {font-size: 18px;}
+h4 {font-size: 12px; font-weight: bold;}
+h5 {font-size: 12px; font-weight: bold;}
+ul ul, ul ol, ol ul, ol ol {margin-top: 9px; margin-bottom: 9px;} /*use .none for 0 margins*/
+
+/* grid system */
+body {text-align: center;}
+.container {text-align: left; margin: 0 auto; width: 850px;}
+.col1, .col2, .col3, .col4 {float: left;}
+.col1 {width: 850px;}
+
+
+/* Typography */
+
+body {
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 16px;
+	color: #43567d;
+}
+.input-form input {
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 24px;
+}
+.task-list .task {
+	font-family: Georgia;
+	font-size: 1.4em;
+}
+#tag {
+	color: #7185af;
+}
+/* ==================================== */ 
+
+
+body {
+	background: #313541 url(../img/bg.jpg);
+}
+.container {
+	height: 500px;
+	background: url(../img/bg.png);
+}
+
+
+.input-form {
+	padding: 0;
+	margin: 100px 0 20px;
+}
+.input-box {
+	width: 834px;
+	height: auto;
+	padding: 7px 8px;
+	margin: 0 auto;
+	background: url(../img/input-wrap-bg.png);
+}
+.input-box input {
+	width: 808px;
+	height: 50px;
+	padding: 0 10px;
+	background: #FFF url(../img/input-bg.png) no-repeat;
+	background-position: 777px 0px;
+	border: 3px solid #43567d; /*43567d 3e50b6*/
+}
+
+
+.task-list {
+}
+
+.task-list ul {
+	border: 1px solid black;
+}
+.task-list dt {
+	background: #20232b;
+}
+
+.task-list .task {
+	width: 760px;
+	height: 60px;
+	margin: 10px auto;
+	background: #20232b;
+	border-bottom: 1px solid #353b4d;
+	border-top: 1px solid #111;
+	-webkit-border-radius: 10px;
+}
+.task-list .task:hover {
+	background: #191c22;
+}
+.task-list .task li {
+	list-style: none;
+}
+.task-list .task .button {
+	margin: 0;
+	width: 50px;
+	height: 100%;
+	float: left;
+	background: url(../img/button.png) no-repeat;
+	background-position: 7px 5px;
+	list-style: none;
+}
+.task-list .task .button:hover {
+	background: url(../img/button-hover.png) no-repeat;
+	background-position: 7px 5px;
+}
+.task-list .task .description {
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 5px;
+	width: 700px;
+	height: 30px;
+	float: left;
+}
+.task-list #tag:hover {
+	cursor: pointer;
+}
+/* complete */
+.task-list #complete {
+	background: transparent;
+	border: none;
+}
+.task-list #complete .button {
+	background: url(../img/button-done.png) no-repeat;
+	background-position: 7px 5px;
+}
+.task-list #complete .description {
+	text-decoration: line-through;
+	color: #3f4451;
+}
