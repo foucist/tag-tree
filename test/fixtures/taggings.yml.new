@@ -1,0 +1,163 @@
+---
+taggings_001:
+  id: 1
+  tag_id: 1
+  taggable_id: 1
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.741480'
+taggings_002:
+  id: 2
+  tag_id: 2
+  taggable_id: 1
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.745483'
+taggings_003:
+  id: 3
+  tag_id: 2
+  taggable_id: 2
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.785519'
+taggings_004:
+  id: 4
+  tag_id: 3
+  taggable_id: 2
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.793526'
+taggings_005:
+  id: 5
+  tag_id: 4
+  taggable_id: 2
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.797530'
+taggings_006:
+  id: 6
+  tag_id: 2
+  taggable_id: 3
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.837565'
+taggings_007:
+  id: 7
+  tag_id: 3
+  taggable_id: 3
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.841569'
+taggings_008:
+  id: 8
+  tag_id: 4
+  taggable_id: 4
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.873597'
+taggings_009:
+  id: 9
+  tag_id: 5
+  taggable_id: 5
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.941658'
+taggings_010:
+  id: 10
+  tag_id: 5
+  taggable_id: 6
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:11.981694'
+taggings_011:
+  id: 11
+  tag_id: 6
+  taggable_id: 7
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-09 16:09:12.017726'
+taggings_012:
+  id: 12
+  tag_id: 2
+  taggable_id: 9
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 00:52:36.860182'
+taggings_013:
+  id: 13
+  tag_id: 3
+  taggable_id: 9
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 00:52:36.868189'
+taggings_014:
+  id: 14
+  tag_id: 2
+  taggable_id: 10
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 00:54:48.561522'
+taggings_015:
+  id: 15
+  tag_id: 2
+  taggable_id: 11
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 00:55:45.215998'
+taggings_016:
+  id: 16
+  tag_id: 3
+  taggable_id: 11
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 00:55:45.220002'
+taggings_017:
+  id: 17
+  tag_id: 2
+  taggable_id: 12
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 01:00:46.744647'
+taggings_018:
+  id: 18
+  tag_id: 3
+  taggable_id: 12
+  taggable_type: Entry
+  tagger_id: 
+  tagger_type: 
+  context: tags
+  created_at: '2013-01-12 01:00:46.752654'
