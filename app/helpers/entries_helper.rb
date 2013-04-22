@@ -7,6 +7,7 @@ module EntriesHelper
   end
 
   private
+  # Unravels the hashtree made by Entry#self.tree
   def hash_to_haml_loop(hash)
     Hash[hash.sort_by{|a,b| @key_order.index(a) }].each do |key, value|
       haml_tag(:ul) do

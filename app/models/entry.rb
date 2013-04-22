@@ -10,6 +10,7 @@ class Entry < ActiveRecord::Base
       self.save
   end
 
+  # Builds a hashtree going by the tag counts
   def self.tree
     auto_hash = Hash.new{ |h,k| h[k] = Hash.new(&h.default_proc) }
     tag_order = Entry.tag_counts.order('COUNT desc')
