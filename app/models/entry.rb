@@ -4,6 +4,8 @@ class Entry < ActiveRecord::Base
   after_create :set_tags
 
   default_scope includes(:tags)
+  scope :tagged, includes(:taggings).where('taggings.id IS NOT NULL')
+  scope :untagged, includes(:taggings).where('taggings.id IS NULL')
 
   def set_tags
     self.tag_list = self.name.scan(/#(\w+)/).join(', ')
@@ -15,7 +17,7 @@ class Entry < ActiveRecord::Base
     auto_hash = Hash.new{ |h,k| h[k] = Hash.new(&h.default_proc) }
     tag_order = Entry.tag_counts.order('COUNT desc')
 
-    Entry.all.each{ |entry|
+    (Entry.tagged + Entry.untagged).each{ |entry|
       sub = auto_hash
       keys = tag_order & entry.tags
       keys.each { |leaf| sub = sub[leaf] }
